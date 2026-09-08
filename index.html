@@ -1,0 +1,104 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>People Tracker</title>
+        <link rel="stylesheet" href="styles.css">
+    </head> 
+    <body>
+        <main class="app">
+
+            <header class="header">
+                <div>
+                    <p class="eyebrow">PEOPLE TRACKER</p>
+                    <h1>Classification Dashboard</h1>
+                    <p class="subtitle">
+                        Add your list, classify each person, and copy the results.
+                    </p>
+                </div>
+
+                <div class="total-card">
+                    <span>Total</span>
+                    <strong id="totalCount">0</strong>
+                </div>
+            </header>
+
+
+            <!-- INPUT -->
+
+            <section id="inputSection" class="input-card">
+
+                <div class="section-title">
+                    <div>
+                        <h2>Import List</h2>
+                        <p>Paste one name per line.</p>
+                    </div>
+                </div>
+
+                <textarea
+                    id="listt"
+                    class="listt"
+                    placeholder="John Smith&#10;Jane Doe&#10;Michael Jackson..."
+                ></textarea>
+
+                <button
+                    type="button"
+                    id="lalaland"
+                    class="primary-button"
+                >
+                    <span>＋</span>
+                    Load List
+                </button>
+
+            </section>
+
+
+            <!-- CONTROLS -->
+
+            <section id="dashboard" class="dashboard hidden">
+
+                <div class="toolbar">
+
+                    <div class="search-wrapper">
+                        <span>⌕</span>
+
+                        <input
+                            id="search"
+                            type="text"
+                            placeholder="Search names..."
+                        >
+                    </div>
+
+                    <button id="copyFull" class="action-button">
+                        📋 Copy Full List
+                    </button>
+
+                    <button id="clearAll" class="action-button danger">
+                        🗑 Clear All
+                    </button>
+
+                </div>
+
+
+                <!-- COUNTERS -->
+
+                <div id="stats" class="stats"></div>
+
+
+                <!-- PEOPLE -->
+
+                <section id="peopleContainer" class="people-container"></section>
+
+            </section>
+
+        </main>
+
+        <div id="toast" class="toast">
+            Copied!
+        </div>
+
+        <script src="script.js"></script>
+
+    </body> 
+</html>
